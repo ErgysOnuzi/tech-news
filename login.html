@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Time</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body{
+        background-image:url(game.jpg);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+  <h2>Login</h2>
+  <form>
+    <div class="user-box">
+      <input  id="user" type="text" name="username" required="">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input id="pass" type="password" name="password" required="">
+      <label>Password</label>
+      
+    </div>
+    <div>
+    <label><input type="checkbox" checked="checked" name="remember"value="Remember me"  style="margin: 0; display: inline;"></label>
+    <p style="margin: 0; display: inline; color:white;" align="right">Remember me</p>
+    </div>
+   
+	
+      <a type="submit" value="Login" class="btn" onClick="login()" >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+    
+     <a href="" type="submit" value="Reset" onclick="clearFunc()" class="btn" >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+     Reset
+    </a>
+  </form>
+</div>
+
+</body>
+</html>
+<script>
+  function login()
+	{
+    var username =document.getElementById("user").value;
+    var password = document.getElementById("pass").value;
+
+    if (username == "ergys" && password == "onuzi") {
+        window.location.href = "home.html";
+    } else {
+      
+        alert("Your username or password is  incorrect");
+         alert("please try again");
+    }
+}
+function clearFunc()
+	{
+		document.getElementById("user").value="";
+		document.getElementById("pass").value="";
+	}	
+</script>
